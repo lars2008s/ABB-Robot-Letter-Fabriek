@@ -36,6 +36,7 @@ ABB-Robot-Letter-Fabriek/
 - Eindverslag: `docs/report/ABB_Robot_Letter_Fabriek_verslag_final.pdf`
 - Presentatie: `docs/presentation/ABB_Robot_Letter_Fabriek_presentatie.pptx`
 - Technisch dossier: `docs/project_dossier.md`
+- Robotcode uploaden: `docs/robot_upload.md`
 - Conceptkeuze: `docs/brainstorm/concept_keuze.md`
 - Stifthouder: `hardware/stifthouder_ontwerp.md`
 
@@ -69,6 +70,22 @@ python software/letter_fabriek_robot.py
 5. De software uploadt `naam.doc` naar de robot via FTP.
 6. Het RAPID-programma op de robot leest het bestand en voert de opdracht uit.
 
+## RAPID-code op de robot zetten
+
+De bestanden in `rapid/` zijn robotprogramma's voor ABB RAPID. Deze moeten eerst op de robotcontroller gezet worden voordat de Python-interface iets nuttigs kan aansturen.
+
+Korte werkwijze:
+
+1. Zet de robot in een veilige testopstelling en controleer de noodstop.
+2. Verbind de laptop met de ABB IRC5-controller via Ethernet.
+3. Open RobotStudio of de FlexPendant.
+4. Kopieer het gewenste `.mod`-bestand naar de controller, bijvoorbeeld naar `HOME:`.
+5. Laad de module in de actieve task, meestal `T_ROB1`.
+6. Controleer TCP, workobject, snelheden en zones.
+7. Test eerst stap voor stap in manual mode met lage snelheid.
+
+Een uitgebreidere uitleg staat in `docs/robot_upload.md`.
+
 ## Communicatieprincipe
 
 Omdat de gebruikte ABB-controller geen PC Interface-licentie heeft, wordt er geen live socketverbinding gebruikt. In plaats daarvan werkt het systeem met een eenvoudige FTP-brievenbus:
@@ -81,3 +98,7 @@ Omdat de gebruikte ABB-controller geen PC Interface-licentie heeft, wordt er gee
 ## Status
 
 Het project bevat werkende testbestanden, documentatie, robotprogramma's en software voor de demonstratie-opstelling. Voor gebruik op een echte robot moeten de TCP, werkobjecten, snelheden en veiligheidszones altijd opnieuw gecontroleerd worden.
+
+## Opmerking over Alien en G-code
+
+De Alien-bestanden en G-code in `examples/` zijn experimentele voorbeeldbestanden. Ze horen niet bij het bewezen werkende onderdeel van het projectverslag. Het werkende onderdeel is de naam-invoer via Python, FTP-upload naar de robot en verwerking door RAPID.

@@ -50,6 +50,22 @@ Het script maakt gebruik van de `ftplib` bibliotheek.
 
 De robot draait een **Polling Loop** (een oneindige lus die wacht op input).
 
+### C. RAPID-code op de robot plaatsen
+
+Voordat de PC een opdracht kan sturen, moet het RAPID-programma op de ABB-controller staan. Dit gebeurt niet automatisch door het Python-script. Het Python-script verstuurt alleen de naam via FTP; de robot moet al een RAPID-module draaien die dit bestand leest.
+
+De gebruikte werkwijze:
+
+1. Verbind de laptop met de IRC5-controller via Ethernet.
+2. Open RobotStudio of gebruik de FlexPendant.
+3. Kopieer het gewenste `.mod`-bestand uit de map `rapid/` naar de robotcontroller, bijvoorbeeld naar `HOME:`.
+4. Laad de module in de robot-task `T_ROB1`.
+5. Controleer de ingestelde TCP van de stift en het workobject van het whiteboard.
+6. Start het programma eerst in manual mode en met lage snelheid.
+7. Als de polling loop draait, kan de Python GUI een naam uploaden als `naam.doc`.
+
+Meer praktische stappen staan in `docs/robot_upload.md`.
+
 **Pseudocode van de logica:**
 
 ```rapid
@@ -82,3 +98,9 @@ De communicatie is succesvol getest.
 4. Het bestand wordt automatisch verwijderd om een lus te voorkomen.
 
 Met deze methode is een robuuste dataverbinding gerealiseerd zonder dat hiervoor de dure *PC Interface* licentie nodig was. Dit maakt de weg vrij voor de volgende stap: het laten bewegen van de robot op basis van de input.
+
+## 7. Afbakening: Alien en G-code
+
+In de repository staan ook Alien- en G-codebestanden als voorbeeldmateriaal en experiment. Deze bestanden zijn niet gebruikt als bewezen werkend onderdeel in het verslag. Het verslag focust op het werkende communicatiesysteem: naam invoeren op de PC, `naam.doc` via FTP naar de robot sturen en het bestand door RAPID laten lezen.
+
+G-code is dus niet de kern van de werkende demonstratie. Als G-code later gebruikt wordt, moet er nog een aparte conversiestap naar veilige ABB RAPID-bewegingen gebeuren, inclusief controle van schaal, TCP, werkobject, snelheden en bereik van de robot.
