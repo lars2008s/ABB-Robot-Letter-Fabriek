@@ -44,7 +44,17 @@ ABB-Robot-Letter-Fabriek/
 
 ## Python-scherm
 
-![Python GUI](documentatie/afbeeldingen/python_scherm.png)
+<img src="documentatie/afbeeldingen/python_scherm.png" alt="Python GUI" width="800">
+
+## Kostprijsberekening
+
+| Onderdeel | Kostprijs |
+| --- | ---: |
+| ABB IRB 2400 met IRC5-controller | €10.700 |
+| Raspberry Pi 3B+ + touchscreen | €44 |
+| Plexiglas | €13 |
+| Houten constructie | €15 |
+| **Totaal** | **€10.772** |
 
 ## Benodigdheden
 

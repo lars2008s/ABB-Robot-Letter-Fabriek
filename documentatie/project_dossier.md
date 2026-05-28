@@ -104,3 +104,15 @@ Met deze methode is een robuuste dataverbinding gerealiseerd zonder dat hiervoor
 In de repository staan ook Alien- en G-codebestanden als voorbeeldmateriaal en experiment. Deze bestanden zijn niet gebruikt als bewezen werkend onderdeel in het verslag. Het verslag focust op het werkende communicatiesysteem: naam invoeren op de PC, `naam.doc` via FTP naar de robot sturen en het bestand door RAPID laten lezen.
 
 G-code is dus niet de kern van de werkende demonstratie. Als G-code later gebruikt wordt, moet er nog een aparte conversiestap naar veilige ABB RAPID-bewegingen gebeuren, inclusief controle van schaal, TCP, werkobject, snelheden en bereik van de robot.
+
+## 8. Kostprijsberekening
+
+| Onderdeel | Kostprijs |
+| --- | ---: |
+| ABB IRB 2400 met IRC5-controller | €10.700 |
+| Raspberry Pi 3B+ + touchscreen | €44 |
+| Plexiglas | €13 |
+| Houten constructie | €15 |
+| **Totaal** | **€10.772** |
+
+De grootste kost is de ABB IRB 2400 met IRC5-controller. De extra materialen voor de interactieve opstelling blijven beperkt tot de Raspberry Pi met touchscreen, plexiglas en de houten constructie.
