@@ -6,7 +6,7 @@ Deze map bevat ABB RAPID-programma's en testmodules voor de robot.
 
 De `.mod`-bestanden moeten via RobotStudio, FlexPendant of FTP naar de ABB-controller gekopieerd worden. Daarna moet de module geladen worden in de juiste robot-task, meestal `T_ROB1`.
 
-Zie `../docs/robot_upload.md` voor de volledige werkwijze.
+Zie `../documentatie/robotcode_op_robot_zetten.md` voor de volledige werkwijze.
 
 Controleer voor uitvoering op een echte robot altijd:
 

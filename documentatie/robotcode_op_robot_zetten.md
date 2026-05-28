@@ -11,7 +11,7 @@ Het Python-programma zet niet automatisch de robotlogica op de robot. Python upl
 - ABB IRC5-controller.
 - FlexPendant of RobotStudio.
 - Laptop met Ethernetverbinding naar de controller.
-- RAPID-module uit de map `rapid/`.
+- RAPID-module uit de map `robotcode/`.
 
 ## Methode 1: Via RobotStudio
 
@@ -20,7 +20,7 @@ Het Python-programma zet niet automatisch de robotlogica op de robot. Python upl
 3. Open RobotStudio.
 4. Maak verbinding met de controller.
 5. Open de RAPID-editor of de controllerbestanden.
-6. Importeer of kopieer het gewenste `.mod`-bestand uit `rapid/`.
+6. Importeer of kopieer het gewenste `.mod`-bestand uit `robotcode/`.
 7. Laad de module in de juiste task, meestal `T_ROB1`.
 8. Controleer of de procedures zichtbaar zijn in de RAPID-editor.
 9. Sla de wijzigingen op de controller op.
@@ -49,7 +49,7 @@ Het Python-programma zet niet automatisch de robotlogica op de robot. Python upl
 Als de RAPID-module draait, kan de Python GUI gebruikt worden:
 
 ```bash
-python software/letter_fabriek_robot.py
+python programmatuur/letter_fabriek_robot.py
 ```
 
 De GUI uploadt `naam.doc` naar de robot. Het RAPID-programma leest dit bestand, voert de actie uit en verwijdert het bestand daarna.

@@ -58,13 +58,13 @@ De gebruikte werkwijze:
 
 1. Verbind de laptop met de IRC5-controller via Ethernet.
 2. Open RobotStudio of gebruik de FlexPendant.
-3. Kopieer het gewenste `.mod`-bestand uit de map `rapid/` naar de robotcontroller, bijvoorbeeld naar `HOME:`.
+3. Kopieer het gewenste `.mod`-bestand uit de map `robotcode/` naar de robotcontroller, bijvoorbeeld naar `HOME:`.
 4. Laad de module in de robot-task `T_ROB1`.
 5. Controleer de ingestelde TCP van de stift en het workobject van het whiteboard.
 6. Start het programma eerst in manual mode en met lage snelheid.
 7. Als de polling loop draait, kan de Python GUI een naam uploaden als `naam.doc`.
 
-Meer praktische stappen staan in `docs/robot_upload.md`.
+Meer praktische stappen staan in `documentatie/robotcode_op_robot_zetten.md`.
 
 **Pseudocode van de logica:**
 

@@ -18,27 +18,33 @@ Het doel van dit project is om een ABB-robotarm te gebruiken als demonstratie-op
 
 ```text
 ABB-Robot-Letter-Fabriek/
-├── docs/
-│   ├── report/          # Eindverslag als PDF
-│   ├── presentation/    # PowerPoint-presentatie
-│   ├── brainstorm/      # Conceptkeuze en brainstorm
+├── documentatie/
+│   ├── afbeeldingen/    # Screenshots en afbeeldingen
+│   ├── verslag/         # Eindverslag als PDF
+│   ├── presentatie/     # PowerPoint-presentatie
+│   ├── conceptkeuze/    # Ideeen en gekozen concept
 │   └── project_dossier.md
-├── hardware/
-│   ├── 3d_models/       # STL- en SolidWorks-bestanden
+├── hardware_ontwerp/
+│   ├── 3d_modellen/     # STL- en SolidWorks-bestanden
 │   └── stifthouder_ontwerp.md
-├── software/            # Python scripts en GUI
-├── rapid/               # ABB RAPID robotprogramma's
-└── examples/            # Voorbeeldbestanden zoals G-code/jobs
+├── programmatuur/       # Python scripts en GUI
+├── robotcode/           # ABB RAPID robotprogramma's
+└── voorbeelden/         # Voorbeeldbestanden zoals G-code/jobs
 ```
 
 ## Documentatie
 
-- Eindverslag: `docs/report/ABB_Robot_Letter_Fabriek_verslag_final.pdf`
-- Presentatie: `docs/presentation/ABB_Robot_Letter_Fabriek_presentatie.pptx`
-- Technisch dossier: `docs/project_dossier.md`
-- Robotcode uploaden: `docs/robot_upload.md`
-- Conceptkeuze: `docs/brainstorm/concept_keuze.md`
-- Stifthouder: `hardware/stifthouder_ontwerp.md`
+- Eindverslag: `documentatie/verslag/ABB_Robot_Letter_Fabriek_verslag_final.pdf`
+- Presentatie: `documentatie/presentatie/ABB_Robot_Letter_Fabriek_presentatie.pptx`
+- Technisch dossier: `documentatie/project_dossier.md`
+- Robotcode op de robot zetten: `documentatie/robotcode_op_robot_zetten.md`
+- Conceptkeuze en ideeen: `documentatie/conceptkeuze/concept_keuze.md`
+- Screenshot Python-scherm: `documentatie/afbeeldingen/python_scherm.png`
+- Stifthouder: `hardware_ontwerp/stifthouder_ontwerp.md`
+
+## Python-scherm
+
+![Python GUI](documentatie/afbeeldingen/python_scherm.png)
 
 ## Benodigdheden
 
@@ -63,7 +69,7 @@ De gebruikte testopstelling werkt met vaste IP-adressen:
 3. Start de Python GUI:
 
 ```bash
-python software/letter_fabriek_robot.py
+python programmatuur/letter_fabriek_robot.py
 ```
 
 4. Typ een naam in de interface.
@@ -72,7 +78,7 @@ python software/letter_fabriek_robot.py
 
 ## RAPID-code op de robot zetten
 
-De bestanden in `rapid/` zijn robotprogramma's voor ABB RAPID. Deze moeten eerst op de robotcontroller gezet worden voordat de Python-interface iets nuttigs kan aansturen.
+De bestanden in `robotcode/` zijn robotprogramma's voor ABB RAPID. Deze moeten eerst op de robotcontroller gezet worden voordat de Python-interface iets nuttigs kan aansturen.
 
 Korte werkwijze:
 
@@ -84,7 +90,7 @@ Korte werkwijze:
 6. Controleer TCP, workobject, snelheden en zones.
 7. Test eerst stap voor stap in manual mode met lage snelheid.
 
-Een uitgebreidere uitleg staat in `docs/robot_upload.md`.
+Een uitgebreidere uitleg staat in `documentatie/robotcode_op_robot_zetten.md`.
 
 ## Communicatieprincipe
 
@@ -101,4 +107,4 @@ Het project bevat werkende testbestanden, documentatie, robotprogramma's en soft
 
 ## Opmerking over Alien en G-code
 
-De Alien-bestanden en G-code in `examples/` zijn experimentele voorbeeldbestanden. Ze horen niet bij het bewezen werkende onderdeel van het projectverslag. Het werkende onderdeel is de naam-invoer via Python, FTP-upload naar de robot en verwerking door RAPID.
+De Alien-bestanden en G-code in `voorbeelden/` zijn experimentele voorbeeldbestanden. Ze horen niet bij het bewezen werkende onderdeel van het projectverslag. Het werkende onderdeel is de naam-invoer via Python, FTP-upload naar de robot en verwerking door RAPID.
